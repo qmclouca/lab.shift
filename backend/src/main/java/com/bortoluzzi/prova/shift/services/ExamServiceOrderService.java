@@ -31,5 +31,15 @@ public class ExamServiceOrderService {
 		ExamServiceOrder entity =  obj.orElseThrow(()-> new EntityNotFoundException("Item procurado não está cadastrado!"));
 		return new ExamServiceOrderDTO(entity);
 	}
+	
+	@Transactional
+	public ExamServiceOrderDTO insert(ExamServiceOrderDTO dto) {
+		ExamServiceOrder entity = new ExamServiceOrder();
+		entity.setServiceOrder(dto.getServiceOrder());
+		entity.setExam(dto.getExam());
+		entity.setPrice(dto.getPrice());
+		entity = repository.save(entity);
+		return new ExamServiceOrderDTO(entity);
+	}
 
 }

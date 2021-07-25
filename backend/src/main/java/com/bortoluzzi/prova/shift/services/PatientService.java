@@ -31,5 +31,16 @@ public class PatientService {
 		Patient entity =  obj.orElseThrow(()-> new EntityNotFoundException("Item procurado não está cadastrado!"));
 		return new PatientDTO(entity);
 	}
+	
+	@Transactional
+	public PatientDTO insert(PatientDTO dto) {
+		Patient entity = new Patient();
+		entity.setName(dto.getName());
+		entity.setSex(dto.getSex());
+		entity.setAddress(dto.getAddress());
+		entity.setBirthDate(dto.getBirthdate());
+		entity = repository.save(entity);
+		return new PatientDTO(entity);
+	}
 
 }

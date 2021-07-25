@@ -31,5 +31,14 @@ public class ExamService {
 		Exam entity =  obj.orElseThrow(()-> new EntityNotFoundException("Item procurado não está cadastrado!"));
 		return new ExamDTO(entity);
 	}
+	
+	@Transactional
+	public ExamDTO insert(ExamDTO dto) {
+		Exam entity = new Exam();
+		entity.setDescription(dto.getDescription());
+		entity.setPrice(dto.getPrice());
+		entity = repository.save(entity);
+		return new ExamDTO(entity);
+	}
 
 }

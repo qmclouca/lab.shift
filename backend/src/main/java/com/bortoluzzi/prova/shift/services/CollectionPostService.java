@@ -31,4 +31,13 @@ public class CollectionPostService {
 		CollectionPost entity = obj.orElseThrow(()-> new EntityNotFoundException("Item procurado não está cadastrado!"));
 		return new CollectionPostDTO(entity);
 	}
+
+	@Transactional
+	public CollectionPostDTO insert(CollectionPostDTO dto) {
+		CollectionPost entity = new CollectionPost();
+		entity.setDescription(dto.getDescription());
+		entity.setAddress(dto.getAddress());
+		entity = repository.save(entity);
+		return new CollectionPostDTO(entity);
+	}
 }

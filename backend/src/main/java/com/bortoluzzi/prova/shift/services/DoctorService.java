@@ -31,4 +31,13 @@ public class DoctorService {
 		Doctor entity = obj.orElseThrow(()-> new EntityNotFoundException("Item procurado não está cadastrado!"));
 		return new DoctorDTO(entity);
 	}
+	
+	@Transactional
+	public DoctorDTO insert(DoctorDTO dto) {
+		Doctor entity = new Doctor();
+		entity.setName(dto.getName());
+		entity.setSpeciality(dto.getSpeciality());
+		entity = repository.save(entity);
+		return new DoctorDTO(entity);
+	}
 }

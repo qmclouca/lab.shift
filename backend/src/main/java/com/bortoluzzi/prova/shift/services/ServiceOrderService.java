@@ -31,4 +31,16 @@ public class ServiceOrderService {
 		ServiceOrder entity =  obj.orElseThrow(()-> new EntityNotFoundException("Item procurado não está cadastrado!"));
 		return new ServiceOrderDTO(entity);
 	}
+	
+	@Transactional
+	public ServiceOrderDTO insert(ServiceOrderDTO dto) {
+		ServiceOrder entity = new ServiceOrder();
+		entity.setDate(dto.getDate());
+		entity.setPatient(dto.getPatient());
+		entity.setHealthInsurance(dto.getHealthInsurance());
+		entity.setCollectionPost(dto.getCollectionPost());
+		entity.setDoctor(dto.getDoctor());
+		entity = repository.save(entity);
+		return new ServiceOrderDTO(entity);
+	}
 }
