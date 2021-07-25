@@ -1,0 +1,5 @@
+package com.bortoluzzi.prova.shift.repositories;
+
+public class CollectionPostRepository {
+
+}
