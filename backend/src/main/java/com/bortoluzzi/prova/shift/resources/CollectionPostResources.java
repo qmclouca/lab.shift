@@ -1,6 +1,5 @@
 package com.bortoluzzi.prova.shift.resources;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +23,4 @@ public class CollectionPostResources {
 		List<CollectionPost> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-
 }

@@ -1,0 +1,8 @@
+list.add(new Doctor(1L, "Rodolfo Lucas Bortoluzzi", "Ortopedia"));
+list.add(new Doctor(2L, "Patrícia Pereira Bortoluzzi", "Pediatra"));
+
+list.add(new Exam(1L, "Colesterol LDL", 30.50));
+		list.add(new Exam(2L, "Hemoglobina", 19.63));
+
+list.add(new Patient(1L, "Gustavo Guimarães", "Masculino", "Av. das Palmeiras, 760; São Paulo/SP; Bairro Daniela; CEP 88053-010", "22/06/1986"));
+		list.add(new Patient(2L, "Silvio Amandio", "Masculino", "Av. das Costureiras, 1254; Florianópolis/SC; Bairro Centro; CEP 88020-001", "07/11/1968"));
