@@ -1,0 +1,5 @@
+package com.bortoluzzi.prova.shift.entities;
+
+public class Exam {
+
+}
