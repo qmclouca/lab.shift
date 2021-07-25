@@ -19,17 +19,17 @@ public class Patient implements Serializable{
 	private String name;
 	private String sex;
 	private String address;
-	private String birthDate;
+	private String birthdate;
 	
 	public Patient() {
 	}
 
-	public Patient(Long id, String name, String sex, String address, String birthDate) {
+	public Patient(Long id, String name, String sex, String address, String birthdate) {
 		this.id = id;
 		this.name = name;
 		this.sex = sex;
 		this.address = address;
-		this.birthDate = birthDate;
+		this.birthdate = birthdate;
 	}
 
 	public Long getId() {
@@ -65,11 +65,11 @@ public class Patient implements Serializable{
 	}
 
 	public String getBirthDate() {
-		return birthDate;
+		return birthdate;
 	}
 
 	public void setBirthDate(String birthDate) {
-		this.birthDate = birthDate;
+		this.birthdate = birthDate;
 	}
 
 	@Override

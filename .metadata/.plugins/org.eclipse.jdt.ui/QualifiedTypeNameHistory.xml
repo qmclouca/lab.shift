@@ -11,4 +11,9 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="com.bortoluzzi.prova.shift.entities.Exam"/>
+    <fullyQualifiedTypeName name="com.bortoluzzi.prova.shift.services.DoctorService"/>
+    <fullyQualifiedTypeName name="com.bortoluzzi.prova.shift.services.ExamService"/>
+    <fullyQualifiedTypeName name="com.bortoluzzi.prova.shift.services.ExamServiceOrderService"/>
+    <fullyQualifiedTypeName name="com.bortoluzzi.prova.shift.services.PatientService"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 </qualifiedTypeNameHistroy>

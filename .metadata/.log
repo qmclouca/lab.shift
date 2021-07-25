@@ -414,3 +414,45 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 11:46:12.520
 !MESSAGE executing callback sts4.classpath.xyHgqFuu SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:48.605
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:48.626
+!MESSAGE classpath=113 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:48.636
+!MESSAGE buffering callback sts4.classpath.xyHgqFuu backend false 113
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:48.641
+!MESSAGE executing callback sts4.classpath.xyHgqFuu 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:48.796
+!MESSAGE executing callback sts4.classpath.xyHgqFuu SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:52.187
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:52.202
+!MESSAGE classpath=113 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:52.215
+!MESSAGE buffering callback sts4.classpath.xyHgqFuu backend false 113
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:52.217
+!MESSAGE executing callback sts4.classpath.xyHgqFuu 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:15:52.293
+!MESSAGE executing callback sts4.classpath.xyHgqFuu SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:21:06.026
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.xyHgqFuu
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:21:06.027
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.xyHgqFuu
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:21:06.028
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-25 12:21:06.029
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.xyHgqFuu => OK

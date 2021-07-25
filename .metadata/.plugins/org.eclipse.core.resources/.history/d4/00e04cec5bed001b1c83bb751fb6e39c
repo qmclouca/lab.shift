@@ -1,0 +1,2 @@
+INSERT INTO tb_collection_post (description, address) VALUES ('Posto da Vila', 'Rua principal 104, Bairro das Perreiras, CEP 888707-098');
+INSERT INTO tb_collection_post (description, address) VALUES ('Unidade Básica de Saúde da Praia', 'Rua da praia 5241, Bairro Campeche, CEP 85462-554');
