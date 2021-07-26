@@ -1,0 +1,95 @@
+.home-container {
+    margin: 40px 10px;
+    padding: 0px 40px;
+}
+.home-content {
+    display: flex;
+    flex-direction: row;
+    padding: 150px 0px 155px 50px;
+}
+
+.text-title {
+    font-size: 25px;
+    line-height: 75px;
+    letter-spacing: -0.015em;
+}
+
+.text-subtitle {
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+.home-text {
+    padding-left: 100px;
+}
+
+.main-image {
+    width: 100%;
+}
+
+//responsivity breakpoints
+
+@media (max-width: 768px){
+    .home-content{
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0 20px 50px 20px;
+    }
+    .main-image{
+        width: 350px;
+        margin: 0px 0px -20px -60px;
+    }
+    .home-text{
+        width: 100%;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+    }
+    .text-title{
+        font-size: 2.5em;
+        text-align: center;
+        line-height: 50px;
+        margin: 40px 0px;
+        letter-spacing: 0;
+    }
+    .text-subtitle{
+        font-size: 1.2em;
+        text-align: center;
+        font-weight: 400;
+        margin: 40px;
+    }
+}
+@media (max-width: 576px){
+    .home-content{        
+        height: 75vh;
+        flex-direction: column-reverse;
+        padding: 0px;    
+    }
+    .main-image {
+        width: 60vw !important;
+        margin: -100px 0px -80px -80px;
+    }
+    .text-title {
+        
+        margin-top: 20px;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 30px;
+        letter-spacing: 0px;
+    }
+    .text-subtitle {
+        font-size: 0.8em;
+        text-align: center;
+        font-weight: 600;
+        margin: 40px 0px;
+    }
+}

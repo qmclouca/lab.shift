@@ -1,0 +1,39 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'D:\\Program Files\\NodeJS\\node.exe',
+1 verbose cli   'D:\\Program Files\\NodeJS\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'start'
+1 verbose cli ]
+2 info using npm@6.14.8
+3 info using node@v12.19.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle front-web@0.1.0~prestart: front-web@0.1.0
+6 info lifecycle front-web@0.1.0~start: front-web@0.1.0
+7 verbose lifecycle front-web@0.1.0~start: unsafe-perm in lifecycle true
+8 verbose lifecycle front-web@0.1.0~start: PATH: D:\Program Files\NodeJS\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;D:\prova_shift\prova.shift.rodolfo\frontend\front-web\node_modules\.bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;F:\Rodolfo\bin;C:\Program Files\Common Files\Oracle\Java\javapath;D:\Program Files\Microsoft MPI\Bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft SQL Server\120\Tools\Binn;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\dotnet;C:\Program Files\Git\cmd;D:\Ruby26-x64\bin;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Programs\Python\Python37;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Microsoft\WindowsApps;C:\Users\Rodolfo Bortoluzzi\AppData\Roaming\npm;D:\JetBrains\RubyMine\bin;C:\adb;D:\Program Files\Python38;D:\Program Files\Python38\Scripts;D:\Program Files\Java\jdk-11.0.9\bin;C:\Program Files\Microsoft\Web Platform Installer;D:\Rodolfo Bortoluzzi\Xampp\mysql\bin;D:\Program Files\NodeJS;C:\Program Files (x86)\AOMEI\AOMEI Backupper 6.4.0;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Programs\Python\Python38\Scripts;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Programs\Python\Python38;D:\Ruby26-x64\bin;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Programs\Python\Python37;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Microsoft\WindowsApps;D:\JetBrains\RubyMine\bin;D:\Program Files\JetBrains\CLion 2020.1.1\bin;C:\Users\Rodolfo Bortoluzzi\.dotnet\tools;D:\Program Files\JetBrains\IntelliJ IDEA 2020.1.3\bin;D:\Users\Rodolfo Bortoluzzi\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\Rodolfo Bortoluzzi\AppData\Local\GitHubDesktop\bin;C:\Users\Rodolfo Bortoluzzi\.dotnet\tools;D:\Program Files\heroku\bin;F:\ProgramFiles\WebStorm 2020.2.2\bin;C:\Users\Rodolfo Bortoluzzi\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;C:\Program Files\JetBrains\CLion 2020.3.2\bin;D:\Program Files\JetBrains\PyCharm 2020.3.3\bin;D:\Program Files\JetBrains\DataGrip 2020.3.2\bin;C:\Users\Rodolfo Bortoluzzi\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.1\bin
+9 verbose lifecycle front-web@0.1.0~start: CWD: D:\prova_shift\prova.shift.rodolfo\frontend\front-web
+10 silly lifecycle front-web@0.1.0~start: Args: [ '/d /s /c', 'react-scripts start' ]
+11 silly lifecycle front-web@0.1.0~start: Returned: code: 1  signal: null
+12 info lifecycle front-web@0.1.0~start: Failed to exec start script
+13 verbose stack Error: front-web@0.1.0 start: `react-scripts start`
+13 verbose stack Exit status 1
+13 verbose stack     at EventEmitter.<anonymous> (D:\Program Files\NodeJS\node_modules\npm\node_modules\npm-lifecycle\index.js:332:16)
+13 verbose stack     at EventEmitter.emit (events.js:314:20)
+13 verbose stack     at ChildProcess.<anonymous> (D:\Program Files\NodeJS\node_modules\npm\node_modules\npm-lifecycle\lib\spawn.js:55:14)
+13 verbose stack     at ChildProcess.emit (events.js:314:20)
+13 verbose stack     at maybeClose (internal/child_process.js:1021:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:286:5)
+14 verbose pkgid front-web@0.1.0
+15 verbose cwd D:\prova_shift\prova.shift.rodolfo\frontend\front-web
+16 verbose Windows_NT 10.0.19042
+17 verbose argv "D:\\Program Files\\NodeJS\\node.exe" "D:\\Program Files\\NodeJS\\node_modules\\npm\\bin\\npm-cli.js" "run" "start"
+18 verbose node v12.19.0
+19 verbose npm  v6.14.8
+20 error code ELIFECYCLE
+21 error errno 1
+22 error front-web@0.1.0 start: `react-scripts start`
+22 error Exit status 1
+23 error Failed at the front-web@0.1.0 start script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]
