@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
 
@@ -9,18 +10,24 @@ interface IFormInputs {
   doctor: string;
   healthInsurance: string;
   collectPost: string;
+  
 }
 
-function App() {
+const App = () => {
   const {
     register,
     handleSubmit,
     formState: { errors }
   } = useForm<IFormInputs>();
 
-  const onSubmit = (data: IFormInputs) => {
-    alert(JSON.stringify(data));
+   const onSubmit = (data: IFormInputs) => {
+    alert(JSON.stringify(data)); //Axios send point
   };
+
+  useEffect(() => {
+    console.log('componente cadastro de ordens de serviço iniciado!');
+    fetch('http://localhost:8080/doctor')
+  }, []);
 
   return (
     <div className="App">
@@ -30,29 +37,29 @@ function App() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Cliente:</label>
-          <input {...register("name")} placeholder="Nome Completo do Paciente" />
+          <input {...register("name", {required: true})} placeholder="Nome Completo do Paciente" />
           {errors?.name && <p>{errors.name.message}</p>}
         </div>
 
         <div>
           <label>Médico:</label>
-          <input {...register("doctor")} placeholder="Nome Completo do Médico solicitante" />
+          <input {...register("doctor", {required: true})} placeholder="Nome Completo do Médico solicitante" />
           {errors?.doctor && <p>{errors.doctor.message}</p>}
         </div>
-
+      
         <div>
           <label>Convênio:</label>
-          <input {...register("healthInsurance")} placeholder="Plano de saúde do cliente" />
+          <input {...register("healthInsurance", {required: true})} placeholder="Plano de saúde do cliente" />
           {errors?.healthInsurance && <p>{errors.healthInsurance.message}</p>}
         </div>
 
         <div>
           <label>Posto de coleta:</label>
-          <input {...register("collectPost")} placeholder="Descrição do posto de coleta (ex: Nome do posto)" />
+          <input {...register("collectPost", {required: true})} placeholder="Descrição do posto de coleta (ex: Nome do posto)" />
           {errors?.collectPost && <p>{errors.collectPost.message}</p>}
         </div>
        
-        <input type="submit" />
+        <input type="submit"  />
       </form>
     </div>
   );

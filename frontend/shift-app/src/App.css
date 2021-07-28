@@ -98,10 +98,10 @@ input[type="submit"] {
 }
 
 .title1 {
-  font-weight: 100;
+  font-size: large;
+  font-style: italic;
+  font-weight: 200;
   color: white;
   text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgb(79, 98, 148);
-
+  padding-bottom: 5px;
 }
