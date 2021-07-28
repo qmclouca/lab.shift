@@ -25,9 +25,16 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log('componente cadastro de ordens de serviço iniciado!');
-    fetch('http://localhost:3000/')
-  }, []);
+    fetch('http://localhost:3000/doctors')
+      .then(responseDoctors => responseDoctors.json())
+      .then(responseDoctors => console.log(responseDoctors));      
+    fetch('http://localhost:3000/patients')
+      .then(responsePatients => responsePatients.json())
+      .then(responsePatients => console.log(responsePatients));
+    fetch('http://localhost:3000/collectionposts')
+      .then(responseCollectionPosts => responseCollectionPosts.json())
+      .then(reponseCollectionPosts => console.log(reponseCollectionPosts));
+    }, []);
 
   return (
     <div className="App">
