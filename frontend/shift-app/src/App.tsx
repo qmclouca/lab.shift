@@ -5,10 +5,10 @@ import { useForm } from "react-hook-form";
 import "./App.css";
 
 interface IFormInputs {
-  firstName: string;
-  lastName: string;
-  isDeveloper: boolean;
-  email: string;
+  name: string;
+  doctor: string;
+  healthInsurance: string;
+  collectPost: string;
 }
 
 function App() {
@@ -24,36 +24,34 @@ function App() {
 
   return (
     <div className="App">
+      <div className= "title1">
+        <h1>Cadastro de Ordens de Serviços</h1>
+      </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <label>First Name</label>
-          <input {...register("firstName")} placeholder="Kotaro" />
-          {errors?.firstName && <p>{errors.firstName.message}</p>}
+          <label>Cliente:</label>
+          <input {...register("name")} placeholder="Nome Completo do Paciente" />
+          {errors?.name && <p>{errors.name.message}</p>}
         </div>
 
         <div>
-          <label>Last Name</label>
-          <input {...register("lastName")} placeholder="Sugawara" />
+          <label>Médico:</label>
+          <input {...register("doctor")} placeholder="Nome Completo do Médico solicitante" />
+          {errors?.doctor && <p>{errors.doctor.message}</p>}
         </div>
 
         <div>
-          <label htmlFor="isDeveloper">Is an developer?</label>
-          <input
-            type="checkbox"
-            {...register("isDeveloper")}
-            placeholder="luo"
-            value="yes"
-          />
+          <label>Convênio:</label>
+          <input {...register("healthInsurance")} placeholder="Plano de saúde do cliente" />
+          {errors?.healthInsurance && <p>{errors.healthInsurance.message}</p>}
         </div>
 
         <div>
-          <label htmlFor="email">Email</label>
-          <input
-            {...register("email")}
-            placeholder="bluebill1049@hotmail.com"
-            type="email"
-          />
+          <label>Posto de coleta:</label>
+          <input {...register("collectPost")} placeholder="Descrição do posto de coleta (ex: Nome do posto)" />
+          {errors?.collectPost && <p>{errors.collectPost.message}</p>}
         </div>
+       
         <input type="submit" />
       </form>
     </div>
