@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
 import "./App.css";
-import { makeRequest } from './utils/request';
+import { makeRequest } from './core/utils/request';
 
 interface IFormInputs {
   name: string;
@@ -24,6 +24,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    //inserir Query Strings aqui para passar parâmetros de consulta ou inserção no banco de dados
     makeRequest({url: '/doctors'})
       .then(responseDoctors => console.log(responseDoctors));      
     makeRequest({url: '/patients'})
