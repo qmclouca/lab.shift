@@ -26,7 +26,7 @@ const App = () => {
 
   useEffect(() => {
     console.log('componente cadastro de ordens de serviço iniciado!');
-    fetch('http://localhost:8080/doctor')
+    fetch('http://localhost:3000/')
   }, []);
 
   return (
