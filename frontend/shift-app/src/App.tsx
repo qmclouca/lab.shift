@@ -1,9 +1,8 @@
-import React from "react";
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
-
 import "./App.css";
+import { makeRequest } from './utils/request';
 
 interface IFormInputs {
   name: string;
@@ -25,14 +24,11 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/doctors')
-      .then(responseDoctors => responseDoctors.json())
+    makeRequest({url: '/doctors'})
       .then(responseDoctors => console.log(responseDoctors));      
-    fetch('http://localhost:3000/patients')
-      .then(responsePatients => responsePatients.json())
+    makeRequest({url: '/patients'})
       .then(responsePatients => console.log(responsePatients));
-    fetch('http://localhost:3000/collectionposts')
-      .then(responseCollectionPosts => responseCollectionPosts.json())
+    makeRequest({url: '/collectionposts'})
       .then(reponseCollectionPosts => console.log(reponseCollectionPosts));
     }, []);
 
