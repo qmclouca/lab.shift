@@ -1,20 +1,11 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
-import { useForm } from "react-hook-form";
 import "./App.css";
 import { makeRequest } from './core/utils/request';
 import { Doctor } from './core/types/Doctor';
 import { Patient } from './core/types/Patient';
 import { ServiceOrder } from './core/types/ServiceOrder';
-
-interface IFormInputs {
-  name: string;
-  doctor: string;
-  healthInsurance: string;
-  collectPost: string; 
-}
-
 
 const App = () => {
   
@@ -22,16 +13,10 @@ const App = () => {
   const [patientResponse, setPatientResponse] = useState<Patient>();
   const [serviceOrderResponse, setServiceOrderResponse] = useState<ServiceOrder>();
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm<IFormInputs>();
-
-   const onSubmit = (data: IFormInputs) => {
-    alert(JSON.stringify(data)); //Axios send point
-  };
-
+  //As variáveis doctorResponse, patientResponse e serviceOrderResponse possuem
+  //todos os dados necessários para popular o formulário com dropdowns
+  //com os dados de doutores, pacientes e ordens de serviço previamente
+  //cadastradas no backend
   console.log(doctorResponse);
   console.log(patientResponse);
   console.log(serviceOrderResponse);
@@ -46,36 +31,46 @@ const App = () => {
       .then(reponseServiceOrderResponse => setServiceOrderResponse(reponseServiceOrderResponse.data));
     }, []);
 
+
+  const handleSubmit =  (event: React.FormEvent<HTMLFormElement>) => {
+     event.preventDefault();
+     const payload = {
+        client: patientResponse,
+        doctor: doctorResponse,
+        healthInsurance: serviceOrderResponse?.healthInsurance,
+        collectionPost: serviceOrderResponse?.collectionPost        
+     }
+     makeRequest({method:'POST', url: '/examserviceorders', data: payload})
+  }
+
   return (
     <div className="App">
       <div className= "title1">
         <h1>Cadastro de Ordens de Serviços</h1>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit}> 
+        <>
+
         <div>
           <label>Cliente:</label>
-          <input {...register("name", {required: true})} placeholder="Nome Completo do Paciente" />
-          {errors?.name && <p>{errors.name.message}</p>}
+          <input placeholder="Nome Completo do Paciente" />
         </div>
 
         <div>
           <label>Médico:</label>
-          <input {...register("doctor", {required: true})} placeholder="Nome Completo do Médico solicitante" />
-          {errors?.doctor && <p>{errors.doctor.message}</p>}
+          <input placeholder="Nome Completo do Médico solicitante" />
         </div>
       
         <div>
           <label>Convênio:</label>
-          <input {...register("healthInsurance", {required: true})} placeholder="Plano de saúde do cliente" />
-          {errors?.healthInsurance && <p>{errors.healthInsurance.message}</p>}
+          <input placeholder="Plano de saúde do cliente" />
         </div>
 
         <div>
           <label>Posto de coleta:</label>
-          <input {...register("collectPost", {required: true})} placeholder="Descrição do posto de coleta (ex: Nome do posto)" />
-          {errors?.collectPost && <p>{errors.collectPost.message}</p>}
+          <input placeholder="Descrição do posto de coleta (ex: Nome do posto)" />
         </div>
-       
+        </>
         <input type="submit"  />
       </form>
     </div>
