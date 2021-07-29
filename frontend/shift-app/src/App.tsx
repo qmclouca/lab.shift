@@ -1,18 +1,27 @@
+import { useState } from "react";
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
 import "./App.css";
 import { makeRequest } from './core/utils/request';
+import { Doctor } from './core/types/Doctor';
+import { Patient } from './core/types/Patient';
+import { ServiceOrder } from './core/types/ServiceOrder';
 
 interface IFormInputs {
   name: string;
   doctor: string;
   healthInsurance: string;
-  collectPost: string;
-  
+  collectPost: string; 
 }
 
+
 const App = () => {
+  
+  const [doctorResponse, setDoctorResponse] = useState<Doctor>();
+  const [patientResponse, setPatientResponse] = useState<Patient>();
+  const [serviceOrderResponse, setServiceOrderResponse] = useState<ServiceOrder>();
+
   const {
     register,
     handleSubmit,
@@ -23,14 +32,18 @@ const App = () => {
     alert(JSON.stringify(data)); //Axios send point
   };
 
+  console.log(doctorResponse);
+  console.log(patientResponse);
+  console.log(serviceOrderResponse);
+
   useEffect(() => {
     //inserir Query Strings aqui para passar parâmetros de consulta ou inserção no banco de dados
     makeRequest({url: '/doctors'})
-      .then(responseDoctors => console.log(responseDoctors));      
+      .then(responseDoctors => setDoctorResponse(responseDoctors.data));      
     makeRequest({url: '/patients'})
-      .then(responsePatients => console.log(responsePatients));
+      .then(responsePatients => setPatientResponse(responsePatients.data));
     makeRequest({url: '/collectionposts'})
-      .then(reponseCollectionPosts => console.log(reponseCollectionPosts));
+      .then(reponseServiceOrderResponse => setServiceOrderResponse(reponseServiceOrderResponse.data));
     }, []);
 
   return (
